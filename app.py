@@ -312,33 +312,33 @@ with col2:
         nav_cols = st.columns(3)
         with nav_cols[0]:
             try:
-                st.page_link("pages/Customer_Order.py", label="Order Now", use_container_width=True)
+                st.page_link("pages/customer_order.py", label="Order Now", use_container_width=True)
             except Exception:
                 st.error("Page Error")
         with nav_cols[1]:
             try:
-                st.page_link("pages/Cashier_Panel.py", label="Cashier", use_container_width=True)
+                st.page_link("pages/cashier_panel.py", label="Cashier", use_container_width=True)
             except Exception:
                 st.error("Page Error")
         with nav_cols[2]:
             try:
-                st.page_link("pages/Admin_Panel.py", label="Admin", use_container_width=True)
+                st.page_link("pages/admin_panel.py", label="Admin", use_container_width=True)
             except Exception:
                 st.error("Page Error")
     elif role == 'cashier':
         # Cashier only sees Cashier Panel
         try:
-            st.page_link("pages/Cashier_Panel.py", label="Cashier Panel", use_container_width=True)
+            st.page_link("pages/cashier_panel.py", label="Cashier Panel", use_container_width=True)
         except Exception:
             st.error("Cashier Panel Unavailable")
     else:
         # Customer only sees Customer Panel
         try:
-            st.page_link("pages/Customer_Order.py", label="Order Now", icon="🍽️", use_container_width=True)
+            st.page_link("pages/customer_order.py", label="Order Now", icon="🍽️", use_container_width=True)
         except (KeyError, Exception) as e:
             # Fallback for missing page registry
             if st.button("Order Now (Link Error)", key="fallback_order_btn", use_container_width=True):
-                st.switch_page("pages/Customer_Order.py")
+                st.switch_page("pages/customer_order.py")
 
 st.markdown('</div>', unsafe_allow_html=True)
 
@@ -349,3 +349,4 @@ st.markdown("""
     <p>Premium Dining Experience</p>
 </div>
 """, unsafe_allow_html=True)
+
