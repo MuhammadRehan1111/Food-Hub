@@ -1,0 +1,23 @@
+[
+    {
+        "deal_id": "d01",
+        "name": {
+            "en": "party"
+        },
+        "description": {
+            "en": "2 zinger burgur "
+        },
+        "price": 116.85,
+        "discount_percent": 5,
+        "applicable_items": [
+            "ff01",
+            "ff01",
+            "ff05",
+            "pz01"
+        ],
+        "min_items": 1,
+        "image": null,
+        "active": true,
+        "order": 1
+    }
+]

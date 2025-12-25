@@ -1,0 +1,1048 @@
+[
+    {
+        "order_id": 1001,
+        "table_id": 3,
+        "items": [
+            {
+                "item_id": "ff01",
+                "name": "Zinger Burger",
+                "quantity": 1,
+                "price": 25
+            },
+            {
+                "item_id": "ff03",
+                "name": "French Fries",
+                "quantity": 2,
+                "price": 12
+            },
+            {
+                "item_id": "pz02",
+                "name": "BBQ Chicken Pizza",
+                "quantity": 1,
+                "price": 50
+            },
+            {
+                "item_id": "pz04",
+                "name": "Margherita Pizza",
+                "quantity": 1,
+                "price": 35
+            },
+            {
+                "item_id": "pz05",
+                "name": "Meat Lovers Pizza",
+                "quantity": 1,
+                "price": 55
+            },
+            {
+                "item_id": "mb01",
+                "name": "Beef Steak",
+                "quantity": 1,
+                "price": 75
+            },
+            {
+                "item_id": "te02",
+                "name": "Green Tea",
+                "quantity": 5,
+                "price": 10
+            },
+            {
+                "item_id": "ic01",
+                "name": "Vanilla Ice Cream",
+                "quantity": 2,
+                "price": 15
+            },
+            {
+                "item_id": "ic05",
+                "name": "Sundae Special",
+                "quantity": 2,
+                "price": 25
+            }
+        ],
+        "total_price": 394,
+        "status": "Paid",
+        "payment_method": "Cash",
+        "timestamp": "2025-12-23T04:08:50.927839",
+        "paid_timestamp": "2025-12-23T04:18:09.683571"
+    },
+    {
+        "order_id": 1002,
+        "table_id": 3,
+        "items": [
+            {
+                "item_id": "ic01",
+                "name": "Vanilla Ice Cream",
+                "quantity": 2,
+                "price": 15
+            },
+            {
+                "item_id": "ic05",
+                "name": "Sundae Special",
+                "quantity": 2,
+                "price": 25
+            }
+        ],
+        "total_price": 80,
+        "status": "Paid",
+        "payment_method": "Card",
+        "timestamp": "2025-12-23T04:10:45.227636",
+        "paid_timestamp": "2025-12-23T04:32:46.803378"
+    },
+    {
+        "order_id": 1003,
+        "table_id": 5,
+        "items": [
+            {
+                "item_id": "pz02",
+                "name": "BBQ Chicken Pizza",
+                "quantity": 1,
+                "price": 50
+            },
+            {
+                "item_id": "pz01",
+                "name": "Pepperoni Pizza",
+                "quantity": 1,
+                "price": 45
+            },
+            {
+                "item_id": "te01",
+                "name": "Karak Tea",
+                "quantity": 1,
+                "price": 8
+            },
+            {
+                "item_id": "ic02",
+                "name": "Chocolate Ice Cream",
+                "quantity": 1,
+                "price": 15
+            }
+        ],
+        "total_price": 118,
+        "status": "Paid",
+        "payment_method": "Cash",
+        "timestamp": "2025-12-23T04:56:02.323657",
+        "paid_timestamp": "2025-12-23T04:57:08.068669"
+    },
+    {
+        "order_id": 1004,
+        "table_id": 1,
+        "items": [
+            {
+                "item_id": "ff05",
+                "name": "Beef Burger",
+                "price": 28,
+                "quantity": 1
+            },
+            {
+                "item_id": "ff02",
+                "name": "Crispy Chicken",
+                "price": 30,
+                "quantity": 1
+            },
+            {
+                "item_id": "mb04",
+                "name": "Mixed Grill Platter",
+                "price": 120,
+                "quantity": 1
+            },
+            {
+                "item_id": "mb03",
+                "name": "Grilled Lamb Chops",
+                "price": 90,
+                "quantity": 1
+            },
+            {
+                "item_id": "te03",
+                "name": "Milk Tea",
+                "price": 7,
+                "quantity": 1
+            },
+            {
+                "item_id": "ic01",
+                "name": "Vanilla Ice Cream",
+                "price": 15,
+                "quantity": 1
+            },
+            {
+                "item_id": "ic05",
+                "name": "Sundae Special",
+                "price": 25,
+                "quantity": 1
+            }
+        ],
+        "total_price": 315,
+        "status": "Paid",
+        "payment_method": "Card",
+        "timestamp": "2025-12-23T05:51:16.887601",
+        "paid_timestamp": "2025-12-23T05:53:18.455641"
+    },
+    {
+        "order_id": 1005,
+        "table_id": 18,
+        "items": [
+            {
+                "item_id": "ff02",
+                "name": "Crispy Chicken",
+                "price": 30,
+                "quantity": 1
+            },
+            {
+                "item_id": "ff05",
+                "name": "Beef Burger",
+                "price": 28,
+                "quantity": 1
+            },
+            {
+                "item_id": "ic02",
+                "name": "Chocolate Ice Cream",
+                "price": 15,
+                "quantity": 1
+            }
+        ],
+        "total_price": 73,
+        "status": "Paid",
+        "payment_method": "Cash",
+        "timestamp": "2025-12-23T06:17:16.453965",
+        "paid_timestamp": "2025-12-23T06:18:14.363108"
+    },
+    {
+        "order_id": 1006,
+        "table_id": 5,
+        "items": [
+            {
+                "item_id": "ff01",
+                "name": "Zinger Burger",
+                "price": 25.0,
+                "quantity": 1
+            },
+            {
+                "item_id": "ff02",
+                "name": "Crispy Chicken",
+                "price": 30,
+                "quantity": 1
+            },
+            {
+                "item_id": "ic02",
+                "name": "Chocolate Ice Cream",
+                "price": 15,
+                "quantity": 1
+            },
+            {
+                "item_id": "ic03",
+                "name": "Mango Ice Cream",
+                "price": 18,
+                "quantity": 1
+            },
+            {
+                "item_id": "mb04",
+                "name": "Mixed Grill Platter",
+                "price": 120,
+                "quantity": 1
+            },
+            {
+                "item_id": "te01",
+                "name": "Karak Tea",
+                "price": 8,
+                "quantity": 1
+            }
+        ],
+        "total_price": 216.0,
+        "status": "Paid",
+        "payment_method": "Cash",
+        "timestamp": "2025-12-23T07:37:00.524288",
+        "paid_timestamp": "2025-12-23T07:37:43.709875"
+    },
+    {
+        "order_id": 1007,
+        "table_id": 1,
+        "items": [
+            {
+                "item_id": "ff04",
+                "name": "Chicken Nuggets",
+                "price": 20,
+                "quantity": 1
+            },
+            {
+                "item_id": "pz05",
+                "name": "Meat Lovers Pizza",
+                "price": 55,
+                "quantity": 1
+            },
+            {
+                "item_id": "mb02",
+                "name": "BBQ Ribs",
+                "price": 85,
+                "quantity": 1
+            },
+            {
+                "item_id": "te02",
+                "name": "Green Tea",
+                "price": 10,
+                "quantity": 1
+            },
+            {
+                "item_id": "ic05",
+                "name": "Sundae Special",
+                "price": 25,
+                "quantity": 1
+            },
+            {
+                "item_id": "te01_deal_d02",
+                "name": "Karak Tea (Deal)",
+                "price": 5.359999999999999,
+                "quantity": 1
+            },
+            {
+                "item_id": "te02_deal_d02",
+                "name": "Green Tea (Deal)",
+                "price": 6.699999999999999,
+                "quantity": 1
+            },
+            {
+                "item_id": "pz02_deal_d03",
+                "name": "BBQ Chicken Pizza (Deal)",
+                "price": 42.5,
+                "quantity": 1
+            },
+            {
+                "item_id": "pz01_deal_d03",
+                "name": "Pepperoni Pizza (Deal)",
+                "price": 38.25,
+                "quantity": 1
+            }
+        ],
+        "total_price": 287.81,
+        "status": "Paid",
+        "payment_method": "Cash",
+        "timestamp": "2025-12-23T08:42:49.102925",
+        "paid_timestamp": "2025-12-23T09:25:23.857525"
+    },
+    {
+        "order_id": 1008,
+        "table_id": 1,
+        "items": [
+            {
+                "item_id": "ic02",
+                "name": "Chocolate Ice Cream",
+                "price": 15,
+                "quantity": 1
+            },
+            {
+                "item_id": "ic01",
+                "name": "Vanilla Ice Cream",
+                "price": 15,
+                "quantity": 1
+            }
+        ],
+        "total_price": 30,
+        "status": "Paid",
+        "payment_method": "Cash",
+        "timestamp": "2025-12-23T09:24:52.530980",
+        "paid_timestamp": "2025-12-23T09:55:35.343456"
+    },
+    {
+        "order_id": 1009,
+        "table_id": 1,
+        "items": [
+            {
+                "item_id": "mb01",
+                "name": "Beef Steak",
+                "price": 75,
+                "quantity": 1
+            },
+            {
+                "item_id": "mb02",
+                "name": "BBQ Ribs",
+                "price": 85,
+                "quantity": 1
+            },
+            {
+                "item_id": "nn01",
+                "name": "alo wala naan",
+                "price": 2.0,
+                "quantity": 1
+            }
+        ],
+        "total_price": 162.0,
+        "status": "Paid",
+        "payment_method": "Cash",
+        "timestamp": "2025-12-23T09:59:50.502024",
+        "paid_timestamp": "2025-12-24T03:22:48.814577"
+    },
+    {
+        "order_id": 1010,
+        "table_id": 1,
+        "items": [
+            {
+                "item_id": "ic01",
+                "name": "Vanilla Ice Cream",
+                "price": 15,
+                "quantity": 1
+            },
+            {
+                "item_id": "ic02",
+                "name": "Chocolate Ice Cream",
+                "price": 15,
+                "quantity": 1
+            }
+        ],
+        "total_price": 30,
+        "status": "Paid",
+        "payment_method": "Cash",
+        "timestamp": "2025-12-23T18:17:32.470491",
+        "paid_timestamp": "2025-12-24T03:25:29.904309"
+    },
+    {
+        "order_id": 1011,
+        "table_id": 1,
+        "items": [
+            {
+                "item_id": "ff05_0",
+                "name": "Beef Burger",
+                "price": 28.0,
+                "quantity": 1
+            },
+            {
+                "item_id": "ff05_1",
+                "name": "Beef Burger",
+                "price": 28.0,
+                "quantity": 1
+            },
+            {
+                "item_id": "ff01_deal_d01_2",
+                "name": "Zinger Burger (Deal)",
+                "price": 20.0,
+                "quantity": 1
+            },
+            {
+                "item_id": "ff05_deal_d01_3",
+                "name": "Beef Burger (Deal)",
+                "price": 22.4,
+                "quantity": 1
+            },
+            {
+                "item_id": "pz01_deal_d01_4",
+                "name": "Pepperoni Pizza (Deal)",
+                "price": 36.0,
+                "quantity": 1
+            },
+            {
+                "item_id": "pz02_deal_d01_5",
+                "name": "BBQ Chicken Pizza (Deal)",
+                "price": 40.0,
+                "quantity": 1
+            }
+        ],
+        "total_price": 174.4,
+        "status": "Paid",
+        "payment_method": "Cash",
+        "timestamp": "2025-12-23T18:44:41.834145",
+        "paid_timestamp": "2025-12-25T02:24:23.685071"
+    },
+    {
+        "order_id": 1012,
+        "table_id": 1,
+        "items": [
+            {
+                "item_id": "ff03_0",
+                "name": "French Fries",
+                "price": 12.0,
+                "quantity": 1
+            }
+        ],
+        "total_price": 12.0,
+        "status": "Paid",
+        "payment_method": "Cash",
+        "timestamp": "2025-12-23T18:47:44.342681",
+        "paid_timestamp": "2025-12-25T02:24:22.315403"
+    },
+    {
+        "order_id": 1013,
+        "table_id": 1,
+        "items": [
+            {
+                "item_id": "pz01_0",
+                "name": "Pepperoni Pizza",
+                "price": 45.0,
+                "quantity": 1
+            },
+            {
+                "item_id": "pz01_1",
+                "name": "Pepperoni Pizza",
+                "price": 45.0,
+                "quantity": 1
+            },
+            {
+                "item_id": "pz01_deal_d03_2",
+                "name": "Pepperoni Pizza (Deal)",
+                "price": 38.25,
+                "quantity": 1
+            },
+            {
+                "item_id": "pz02_deal_d03_3",
+                "name": "BBQ Chicken Pizza (Deal)",
+                "price": 42.5,
+                "quantity": 1
+            },
+            {
+                "item_id": "pz03_deal_d03_4",
+                "name": "Vegetable Pizza (Deal)",
+                "price": 34.0,
+                "quantity": 1
+            },
+            {
+                "item_id": "pz04_deal_d03_5",
+                "name": "Margherita Pizza (Deal)",
+                "price": 29.75,
+                "quantity": 1
+            },
+            {
+                "item_id": "pz05_deal_d03_6",
+                "name": "Meat Lovers Pizza (Deal)",
+                "price": 46.75,
+                "quantity": 1
+            },
+            {
+                "item_id": "ic01_deal_d03_7",
+                "name": "Vanilla Ice Cream (Deal)",
+                "price": 12.75,
+                "quantity": 1
+            },
+            {
+                "item_id": "ic02_deal_d03_8",
+                "name": "Chocolate Ice Cream (Deal)",
+                "price": 12.75,
+                "quantity": 1
+            },
+            {
+                "item_id": "ic03_deal_d03_9",
+                "name": "Mango Ice Cream (Deal)",
+                "price": 15.3,
+                "quantity": 1
+            },
+            {
+                "item_id": "ic04_deal_d03_10",
+                "name": "Strawberry Ice Cream (Deal)",
+                "price": 15.3,
+                "quantity": 1
+            },
+            {
+                "item_id": "ic05_deal_d03_11",
+                "name": "Sundae Special (Deal)",
+                "price": 21.25,
+                "quantity": 1
+            }
+        ],
+        "total_price": 358.6,
+        "status": "Paid",
+        "payment_method": "Card",
+        "timestamp": "2025-12-23T22:08:25.606920",
+        "paid_timestamp": "2025-12-23T22:09:22.516245"
+    },
+    {
+        "order_id": 1014,
+        "table_id": 9,
+        "items": [
+            {
+                "item_id": "ff04",
+                "name": "Chicken Nuggets",
+                "price": 20.0,
+                "quantity": 1
+            },
+            {
+                "item_id": "mb02",
+                "name": "BBQ Ribs",
+                "price": 85.0,
+                "quantity": 1
+            },
+            {
+                "item_id": "ff01_deal_d01",
+                "name": "Zinger Burger (Deal)",
+                "price": 20.0,
+                "quantity": 1
+            },
+            {
+                "item_id": "ff05_deal_d01",
+                "name": "Beef Burger (Deal)",
+                "price": 22.4,
+                "quantity": 1
+            },
+            {
+                "item_id": "pz01_deal_d01",
+                "name": "Pepperoni Pizza (Deal)",
+                "price": 36.0,
+                "quantity": 1
+            },
+            {
+                "item_id": "pz02_deal_d01",
+                "name": "BBQ Chicken Pizza (Deal)",
+                "price": 40.0,
+                "quantity": 1
+            },
+            {
+                "item_id": "mb04_deal_d04",
+                "name": "Mixed Grill Platter (Deal)",
+                "price": 108.0,
+                "quantity": 1
+            },
+            {
+                "item_id": "te01_deal_d04",
+                "name": "Karak Tea (Deal)",
+                "price": 7.2,
+                "quantity": 1
+            }
+        ],
+        "total_price": 338.6,
+        "status": "Paid",
+        "payment_method": "Cash",
+        "timestamp": "2025-12-23T22:33:35.822189",
+        "paid_timestamp": "2025-12-23T22:34:16.997192"
+    },
+    {
+        "order_id": 1015,
+        "table_id": 1,
+        "items": [
+            {
+                "item_id": "pz01",
+                "name": "Pepperoni Pizza",
+                "price": 45.0,
+                "quantity": 1
+            },
+            {
+                "item_id": "pz02",
+                "name": "BBQ Chicken Pizza",
+                "price": 50.0,
+                "quantity": 1
+            },
+            {
+                "item_id": "mb04_deal_d04",
+                "name": "Mixed Grill Platter (Deal)",
+                "price": 108.0,
+                "quantity": 1
+            },
+            {
+                "item_id": "te01_deal_d04",
+                "name": "Karak Tea (Deal)",
+                "price": 7.2,
+                "quantity": 1
+            }
+        ],
+        "total_price": 210.2,
+        "status": "Paid",
+        "payment_method": "Cash",
+        "timestamp": "2025-12-23T22:42:20.008749",
+        "paid_timestamp": "2025-12-23T22:42:48.615125"
+    },
+    {
+        "order_id": 1016,
+        "table_id": 1,
+        "items": [
+            {
+                "item_id": "pz01",
+                "name": "Pepperoni Pizza",
+                "price": 45.0,
+                "quantity": 4
+            },
+            {
+                "item_id": "mb04_deal_d04",
+                "name": "Mixed Grill Platter (Deal)",
+                "price": 108.0,
+                "quantity": 1
+            },
+            {
+                "item_id": "te01_deal_d04",
+                "name": "Karak Tea (Deal)",
+                "price": 7.2,
+                "quantity": 1
+            },
+            {
+                "item_id": "ff01_deal_d01",
+                "name": "Zinger Burger (Deal)",
+                "price": 20.0,
+                "quantity": 1
+            },
+            {
+                "item_id": "ff05_deal_d01",
+                "name": "Beef Burger (Deal)",
+                "price": 22.4,
+                "quantity": 1
+            },
+            {
+                "item_id": "pz01_deal_d01",
+                "name": "Pepperoni Pizza (Deal)",
+                "price": 36.0,
+                "quantity": 1
+            },
+            {
+                "item_id": "pz02_deal_d01",
+                "name": "BBQ Chicken Pizza (Deal)",
+                "price": 40.0,
+                "quantity": 1
+            }
+        ],
+        "total_price": 413.6,
+        "status": "Paid",
+        "payment_method": "Cash",
+        "timestamp": "2025-12-23T23:27:42.949789",
+        "paid_timestamp": "2025-12-23T23:28:47.973046"
+    },
+    {
+        "order_id": 1017,
+        "table_id": 1,
+        "items": [
+            {
+                "item_id": "pz01",
+                "name": "Pepperoni Pizza",
+                "price": 45.0,
+                "quantity": 2
+            },
+            {
+                "item_id": "pz03",
+                "name": "Vegetable Pizza",
+                "price": 40.0,
+                "quantity": 1
+            },
+            {
+                "item_id": "ic02",
+                "name": "Chocolate Ice Cream",
+                "price": 15.0,
+                "quantity": 2
+            },
+            {
+                "item_id": "nn01",
+                "name": "alo wala naan",
+                "price": 2.0,
+                "quantity": 1
+            }
+        ],
+        "total_price": 162.0,
+        "status": "Paid",
+        "payment_method": "Card",
+        "timestamp": "2025-12-24T02:14:50.871904",
+        "paid_timestamp": "2025-12-24T02:15:34.823216"
+    },
+    {
+        "order_id": 1018,
+        "table_id": 1,
+        "items": [
+            {
+                "item_id": "ff01_deal_d01",
+                "name": "Zinger Burger (Deal)",
+                "price": 21.25,
+                "quantity": 1
+            },
+            {
+                "item_id": "ff05_deal_d01",
+                "name": "Beef Burger (Deal)",
+                "price": 23.8,
+                "quantity": 1
+            },
+            {
+                "item_id": "pz01_deal_d01",
+                "name": "Pepperoni Pizza (Deal)",
+                "price": 38.25,
+                "quantity": 1
+            },
+            {
+                "item_id": "pz02_deal_d01",
+                "name": "BBQ Chicken Pizza (Deal)",
+                "price": 42.5,
+                "quantity": 1
+            },
+            {
+                "item_id": "ff01",
+                "name": "Zinger Burger",
+                "price": 25.0,
+                "quantity": 2
+            }
+        ],
+        "total_price": 175.8,
+        "status": "Paid",
+        "payment_method": "Cash",
+        "timestamp": "2025-12-24T03:22:16.775469",
+        "paid_timestamp": "2025-12-25T02:24:21.073531"
+    },
+    {
+        "order_id": 1019,
+        "table_id": 1,
+        "items": [
+            {
+                "item_id": "mb04",
+                "name": "Mixed Grill Platter",
+                "price": 120.0,
+                "quantity": 10
+            }
+        ],
+        "total_price": 1200.0,
+        "status": "Paid",
+        "payment_method": "Cash",
+        "timestamp": "2025-12-24T03:27:13.001589",
+        "paid_timestamp": "2025-12-24T03:27:56.121705"
+    },
+    {
+        "order_id": 1020,
+        "table_id": 1,
+        "items": [
+            {
+                "item_id": "nno2",
+                "name": "sada naan",
+                "price": 1.0,
+                "quantity": 2
+            }
+        ],
+        "total_price": 2.0,
+        "status": "Paid",
+        "payment_method": "Cash",
+        "timestamp": "2025-12-24T03:49:11.871478",
+        "paid_timestamp": "2025-12-24T04:16:59.085068"
+    },
+    {
+        "order_id": 1021,
+        "table_id": 1,
+        "items": [
+            {
+                "item_id": "ff01",
+                "name": "Zinger Burger",
+                "price": 25.0,
+                "quantity": 2
+            },
+            {
+                "item_id": "ff03",
+                "name": "French Fries",
+                "price": 12.0,
+                "quantity": 2
+            },
+            {
+                "item_id": "ff01_deal_d01",
+                "name": "Zinger Burger (Deal)",
+                "price": 21.25,
+                "quantity": 2
+            },
+            {
+                "item_id": "pz01_deal_d01",
+                "name": "Pepperoni Pizza (Deal)",
+                "price": 38.25,
+                "quantity": 1
+            }
+        ],
+        "total_price": 154.75,
+        "status": "Paid",
+        "payment_method": "Cash",
+        "timestamp": "2025-12-24T05:26:38.090094",
+        "paid_timestamp": "2025-12-25T02:24:19.652988"
+    },
+    {
+        "order_id": 1022,
+        "table_id": 1,
+        "items": [
+            {
+                "item_id": "mb04_deal_d04",
+                "name": "Mixed Grill Platter (Deal)",
+                "price": 108.0,
+                "quantity": 2
+            },
+            {
+                "item_id": "te01_deal_d04",
+                "name": "Karak Tea (Deal)",
+                "price": 7.2,
+                "quantity": 2
+            },
+            {
+                "item_id": "pz01_deal_d03",
+                "name": "Pepperoni Pizza (Deal)",
+                "price": 38.25,
+                "quantity": 1
+            },
+            {
+                "item_id": "pz02_deal_d03",
+                "name": "BBQ Chicken Pizza (Deal)",
+                "price": 42.5,
+                "quantity": 1
+            },
+            {
+                "item_id": "pz03_deal_d03",
+                "name": "Vegetable Pizza (Deal)",
+                "price": 34.0,
+                "quantity": 1
+            },
+            {
+                "item_id": "pz04_deal_d03",
+                "name": "Margherita Pizza (Deal)",
+                "price": 29.75,
+                "quantity": 1
+            },
+            {
+                "item_id": "pz05_deal_d03",
+                "name": "Meat Lovers Pizza (Deal)",
+                "price": 46.75,
+                "quantity": 1
+            },
+            {
+                "item_id": "ic01_deal_d03",
+                "name": "Vanilla Ice Cream (Deal)",
+                "price": 12.75,
+                "quantity": 1
+            },
+            {
+                "item_id": "ic02_deal_d03",
+                "name": "Chocolate Ice Cream (Deal)",
+                "price": 12.75,
+                "quantity": 1
+            },
+            {
+                "item_id": "ic03_deal_d03",
+                "name": "Mango Ice Cream (Deal)",
+                "price": 15.3,
+                "quantity": 1
+            },
+            {
+                "item_id": "ic04_deal_d03",
+                "name": "Strawberry Ice Cream (Deal)",
+                "price": 15.3,
+                "quantity": 1
+            },
+            {
+                "item_id": "ic05_deal_d03",
+                "name": "Sundae Special (Deal)",
+                "price": 21.25,
+                "quantity": 1
+            }
+        ],
+        "total_price": 499.0,
+        "status": "Paid",
+        "payment_method": "Cash",
+        "timestamp": "2025-12-24T21:09:34.500970",
+        "paid_timestamp": "2025-12-25T02:24:18.327639"
+    },
+    {
+        "order_id": 1023,
+        "table_id": 1,
+        "items": [
+            {
+                "item_id": "ff01_deal_d01",
+                "name": "Zinger Burger (Deal)",
+                "price": 21.25,
+                "quantity": 4
+            },
+            {
+                "item_id": "pz01_deal_d01",
+                "name": "Pepperoni Pizza (Deal)",
+                "price": 38.25,
+                "quantity": 2
+            },
+            {
+                "item_id": "mb04_deal_d04",
+                "name": "Mixed Grill Platter (Deal)",
+                "price": 108.0,
+                "quantity": 1
+            },
+            {
+                "item_id": "te01_deal_d04",
+                "name": "Karak Tea (Deal)",
+                "price": 7.2,
+                "quantity": 1
+            }
+        ],
+        "total_price": 276.7,
+        "status": "Paid",
+        "payment_method": "Cash",
+        "timestamp": "2025-12-24T22:59:07.919641",
+        "paid_timestamp": "2025-12-25T02:24:16.842502"
+    },
+    {
+        "order_id": 1024,
+        "table_id": 6,
+        "items": [
+            {
+                "item_id": "deal_d05",
+                "name": "party",
+                "price": 0.0,
+                "quantity": 2
+            },
+            {
+                "item_id": "deal_d04",
+                "name": "BBQ Night",
+                "price": 0.0,
+                "quantity": 1
+            }
+        ],
+        "total_price": 0.0,
+        "status": "Paid",
+        "payment_method": "Cash",
+        "timestamp": "2025-12-24T23:53:59.813194",
+        "paid_timestamp": "2025-12-25T02:24:15.570228"
+    },
+    {
+        "order_id": 1025,
+        "table_id": 1,
+        "items": [
+            {
+                "item_id": "deal_d01",
+                "name": "party",
+                "price": 116.85,
+                "quantity": 1
+            }
+        ],
+        "total_price": 116.85,
+        "status": "Paid",
+        "payment_method": "Cash",
+        "timestamp": "2025-12-25T01:53:48.820095",
+        "paid_timestamp": "2025-12-25T01:54:18.497513"
+    },
+    {
+        "order_id": 1026,
+        "table_id": 1,
+        "items": [
+            {
+                "item_id": "deal_d01",
+                "name": "party",
+                "price": 116.85,
+                "quantity": 1
+            }
+        ],
+        "total_price": 116.85,
+        "status": "Paid",
+        "payment_method": "Cash",
+        "timestamp": "2025-12-25T02:23:19.696576",
+        "paid_timestamp": "2025-12-25T02:24:14.026557"
+    },
+    {
+        "order_id": 1027,
+        "table_id": 1,
+        "items": [
+            {
+                "item_id": "deal_d01",
+                "name": "party",
+                "price": 116.85,
+                "quantity": 1
+            }
+        ],
+        "total_price": 116.85,
+        "status": "Paid",
+        "payment_method": "Cash",
+        "timestamp": "2025-12-25T02:25:00.445208",
+        "paid_timestamp": "2025-12-25T02:25:19.435471"
+    },
+    {
+        "order_id": 1028,
+        "table_id": 1,
+        "items": [
+            {
+                "item_id": "ff05",
+                "name": "Beef Burger",
+                "price": 28.0,
+                "quantity": 1
+            },
+            {
+                "item_id": "pz01",
+                "name": "Pepperoni Pizza",
+                "price": 45.0,
+                "quantity": 1
+            }
+        ],
+        "total_price": 73.0,
+        "status": "Paid",
+        "payment_method": "Cash",
+        "timestamp": "2025-12-25T23:45:40.173126",
+        "paid_timestamp": "2025-12-25T23:46:02.609052"
+    }
+]
