@@ -312,6 +312,14 @@ st.markdown("""
         font-family: 'Playfair Display', serif !important;
         font-weight: 700 !important;
     }
+
+    h4 {
+        color: #d4af37 !important;
+        font-family: 'Inter', sans-serif !important;
+        font-weight: 600 !important;
+        margin-top: 1rem !important;
+        margin-bottom: 0.5rem !important;
+    }
     
     /* Expander (Category/Menu Box) styling */
     [data-testid="stExpander"] {
@@ -973,7 +981,7 @@ with tab5:
                     return re.sub(r'[\x00-\x08\x0b\x0c\x0e-\x1f]', '', val)
                 return val
                 
-            df = df.applymap(clean_excel_data)
+            df = df.map(clean_excel_data)
             
             st.dataframe(df, use_container_width=True, hide_index=True)
             
@@ -985,7 +993,8 @@ with tab5:
             with col2:
                 buffer = BytesIO()
                 with pd.ExcelWriter(buffer, engine='openpyxl') as writer:
-                    df.to_excel(writer, index=False)
+                    df.to_excel(writer, index=False, sheet_name='Orders')
+                buffer.seek(0)
                 st.download_button("📥 Export Excel", buffer.getvalue(), f"orders_{datetime.now().strftime('%Y%m%d')}.xlsx")
 
 # =============================================================================
@@ -1176,15 +1185,16 @@ with tab6:
             buffer = BytesIO()
             with pd.ExcelWriter(buffer, engine='openpyxl') as writer:
                 # Clean summary data
-                summary_df = pd.DataFrame({'Metric': [t('total_revenue'), t('total_orders'), t('avg_order')], 
-                             'Value': [f"{total_revenue:.0f} SAR", total_orders, f"{avg_order:.0f} SAR"]})
-                summary_df = summary_df.applymap(lambda x: re.sub(r'[\x00-\x08\x0b\x0c\x0e-\x1f]', '', str(x)) if isinstance(x, str) else x)
+                summary_df = pd.DataFrame({'Metric': [t('total_revenue'), t('total_orders')], 
+                             'Value': [f"{total_revenue:.0f} SAR", total_orders]})
+                summary_df = summary_df.map(lambda x: re.sub(r'[\x00-\x08\x0b\x0c\x0e-\x1f]', '', str(x)) if isinstance(x, str) else x)
                 summary_df.to_excel(writer, sheet_name='Summary', index=False)
                 
                 if all_items:
                     # Clean top items data
-                    top_items_clean = top_items.copy().applymap(lambda x: re.sub(r'[\x00-\x08\x0b\x0c\x0e-\x1f]', '', str(x)) if isinstance(x, str) else x)
+                    top_items_clean = top_items.copy().map(lambda x: re.sub(r'[\x00-\x08\x0b\x0c\x0e-\x1f]', '', str(x)) if isinstance(x, str) else x)
                     top_items_clean.to_excel(writer, sheet_name='Top Items', index=False)
+            buffer.seek(0)
             st.download_button("📥 Download", buffer.getvalue(), f"analytics_{datetime.now().strftime('%Y%m%d')}.xlsx")
 
 # Footer

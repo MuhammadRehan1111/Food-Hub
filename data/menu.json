@@ -14,7 +14,8 @@
                 "ar": ""
             },
             "image": "https://sl.bing.net/fh7W4HKjfeC",
-            "available": true
+            "available": true,
+            "featured": true
         },
         {
             "item_id": "ff03",
@@ -30,7 +31,8 @@
                 "ar": "بطاطس مقلية ذهبية مقرمشة مع التوابل"
             },
             "image": "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=400",
-            "available": true
+            "available": true,
+            "featured": true
         },
         {
             "item_id": "ff04",
@@ -113,7 +115,8 @@
                 "ar": "خضار طازجة مع الجبن (وسط)"
             },
             "image": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400",
-            "available": true
+            "available": true,
+            "featured": true
         },
         {
             "item_id": "pz04",
@@ -391,7 +394,8 @@
                 "ar": "آيس كريم مشكل مع صلصة الشوكولاتة والمكسرات"
             },
             "image": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400",
-            "available": true
+            "available": true,
+            "featured": true
         }
     ],
     "naan": [

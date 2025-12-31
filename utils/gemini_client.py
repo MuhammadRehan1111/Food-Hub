@@ -16,7 +16,7 @@ def get_available_model() -> Optional[str]:
     try:
         models = genai.list_models()
         # Preferred models in order
-        preferred = ['gemini-1.5-flash', 'gemini-1.5-pro', 'gemini-pro', 'gemini-1.0-pro']
+        preferred = ['gemini-flash-latest', 'gemini-1.5-flash', 'gemini-1.5-pro', 'gemini-pro', 'gemini-2.5-flash-lite']
         
         available_names = []
         for model in models:

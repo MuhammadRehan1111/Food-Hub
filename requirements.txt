@@ -1,19 +1,9 @@
-<<<<<<< HEAD
-streamlit>=1.32.0
-google-generativeai>=0.3.0
-pandas>=2.0.0
-plotly>=5.18.0
-openpyxl>=3.1.0
-python-dateutil>=2.8.0
-filelock>=3.12.0
-python-dotenv>=1.0.0
-=======
-streamlit>=1.32.0
-google-generativeai>=0.3.0
-pandas>=2.0.0
-plotly>=5.18.0
-openpyxl>=3.1.0
-python-dateutil>=2.8.0
-filelock>=3.12.0
-python-dotenv>=1.0.0
->>>>>>> 020e7287826721044c6f88cf8c0cf71b777fd879
+streamlit
+pandas
+plotly
+google-generativeai
+python-dotenv
+filelock
+watchdog
+pillow
+requests

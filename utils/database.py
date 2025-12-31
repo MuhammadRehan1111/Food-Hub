@@ -4,9 +4,15 @@ Uses JSON files with file locking for thread safety.
 """
 import json
 import os
+import sys
 import filelock
 from datetime import datetime
+from pathlib import Path
 from typing import Dict, List, Optional, Any
+
+# Add parent directory to path for imports
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
 import config
 
 # File locks for thread safety
