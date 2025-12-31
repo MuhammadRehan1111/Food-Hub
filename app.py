@@ -13,6 +13,14 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
+# Auto-redirect for QR Code Scans
+if "table_id" in st.query_params:
+    table_id = st.query_params["table_id"]
+    if table_id:
+        st.session_state["table_id"] = table_id
+        st.session_state["role"] = "customer"
+        st.switch_page("pages/customer_order.py")
+
 # Data directory
 DATA_DIR = Path(__file__).parent / "data"
 SETTINGS_FILE = DATA_DIR / "settings.json"

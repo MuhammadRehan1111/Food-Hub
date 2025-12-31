@@ -55,6 +55,11 @@ st.markdown("""
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
     
+    /* Hide Default Sidebar Navigation */
+    [data-testid="stSidebarNav"] {
+        display: none !important;
+    }
+    
     /* Header styling */
     .main-header {
         background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(184, 134, 11, 0.1) 100%);
@@ -344,9 +349,12 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# Get table_id from URL parameters
+# Get table_id from URL parameters or Session State
 query_params = st.query_params
 table_id = query_params.get("table_id", None)
+
+if not table_id:
+    table_id = st.session_state.get("table_id", None)
 
 # Validate table_id
 if table_id is None:
@@ -355,6 +363,7 @@ if table_id is None:
         <h2>🍽️ Welcome to Our Restaurant</h2>
     </div>
     """, unsafe_allow_html=True)
+
     
     st.error("⚠️ No table detected!")
     st.markdown("""
