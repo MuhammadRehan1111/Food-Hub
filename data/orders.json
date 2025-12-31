@@ -1044,5 +1044,28 @@
         "payment_method": "Cash",
         "timestamp": "2025-12-25T23:45:40.173126",
         "paid_timestamp": "2025-12-25T23:46:02.609052"
+    },
+    {
+        "order_id": 1029,
+        "table_id": 10,
+        "items": [
+            {
+                "item_id": "nn01",
+                "name": "alo wala naan",
+                "price": 2.0,
+                "quantity": 1
+            },
+            {
+                "item_id": "nno2",
+                "name": "sada naan",
+                "price": 1.0,
+                "quantity": 2
+            }
+        ],
+        "total_price": 4.0,
+        "status": "Pending",
+        "payment_method": null,
+        "timestamp": "2026-01-01T00:03:51.587250",
+        "paid_timestamp": null
     }
 ]

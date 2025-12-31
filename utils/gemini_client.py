@@ -16,7 +16,7 @@ def get_available_model() -> Optional[str]:
     try:
         models = genai.list_models()
         # Preferred models in order
-        preferred = ['gemini-flash-latest', 'gemini-1.5-flash', 'gemini-1.5-pro', 'gemini-pro', 'gemini-2.5-flash-lite']
+        preferred = ['gemini-2.5-flash', 'gemini-2.0-flash', 'gemini-1.5-flash', 'gemini-1.5-pro', 'gemini-pro']
         
         available_names = []
         for model in models:
@@ -127,7 +127,7 @@ class RestaurantChatbot:
             
             if model_name:
                 self.model = genai.GenerativeModel(model_name)
-                system_prompt = get_system_prompt(self.table_id, self.menu)
+                system_prompt = get_system_prompt(self.table_id, self.menu_data, self.deals)
                 self.chat = self.model.start_chat(history=[])
                 # Send system context as first message
                 self.chat.send_message(f"""[SYSTEM CONTEXT - Do not repeat this to users]
@@ -213,7 +213,7 @@ Just tell me what sounds good, or ask me anything! I'm here to help!"""
     def add_to_order(self, item_id: str, quantity: int):
         """Add an item to the current order."""
         item = None
-        for category, items in self.menu.items():
+        for category, items in self.menu_data.items():
             for menu_item in items:
                 if menu_item['item_id'] == item_id:
                     item = menu_item

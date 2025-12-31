@@ -31,3 +31,6 @@ ADMIN_PASSWORD = os.getenv('ADMIN_PASSWORD', 'admin123')
 
 # API Keys
 GEMINI_API_KEY = os.getenv('GEMINI_API_KEY', '')
+
+# Payment Methods
+PAYMENT_METHODS = ["Cash", "Credit Card", "Debit Card", "Online Transfer"]
