@@ -1067,5 +1067,40 @@
         "payment_method": null,
         "timestamp": "2026-01-01T00:03:51.587250",
         "paid_timestamp": null
+    },
+    {
+        "order_id": 1030,
+        "table_id": 1,
+        "items": [
+            {
+                "item_id": "ff01",
+                "name": "Zinger Burger",
+                "price": 25.0,
+                "quantity": 1
+            },
+            {
+                "item_id": "pz05",
+                "name": "Meat Lovers Pizza",
+                "price": 55.0,
+                "quantity": 2
+            },
+            {
+                "item_id": "mb02",
+                "name": "BBQ Ribs",
+                "price": 85.0,
+                "quantity": 3
+            },
+            {
+                "item_id": "pz01",
+                "name": "Pepperoni Pizza",
+                "price": 45.0,
+                "quantity": 1
+            }
+        ],
+        "total_price": 435.0,
+        "status": "Pending",
+        "payment_method": null,
+        "timestamp": "2026-01-02T04:30:52.917020",
+        "paid_timestamp": null
     }
 ]
