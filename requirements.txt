@@ -7,3 +7,4 @@ filelock
 watchdog
 pillow
 requests
+openpyxl

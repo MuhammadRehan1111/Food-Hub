@@ -56,9 +56,9 @@ st.markdown("""
     footer {visibility: hidden;}
     
     /* Hide Default Sidebar Navigation */
-    [data-testid="stSidebarNav"] {
+    /* [data-testid="stSidebarNav"] {
         display: none !important;
-    }
+    } */
     
     /* Header styling */
     .main-header {
