@@ -758,7 +758,7 @@ with tab2:
         st.session_state.selected_menu_category = "All"
     
     # Display category buttons with images
-    st.markdown("**Select a Category:**")
+    st.markdown('<p style="color: #d4af37; font-size: 1.2rem; font-weight: 600; font-family: \'Playfair Display\', serif;">Select a Category:</p>', unsafe_allow_html=True)
     
     # Filter categories to only active ones
     active_cats = [c for c in categories if c.get('active', True)]

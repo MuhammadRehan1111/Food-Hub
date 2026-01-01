@@ -6,6 +6,11 @@ Includes fallback mode when API is unavailable.
 import google.generativeai as genai
 from typing import List, Dict, Optional
 import config
+import logging
+
+# Configure logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 # Configure Gemini API
 genai.configure(api_key=config.GEMINI_API_KEY)
@@ -21,20 +26,26 @@ def get_available_model() -> Optional[str]:
         available_names = []
         for model in models:
             if 'generateContent' in model.supported_generation_methods:
-                available_names.append(model.name.replace('models/', ''))
+                clean_name = model.name.replace('models/', '')
+                available_names.append(clean_name)
+        
+        logger.info(f"Available Gemini models: {available_names}")
         
         # Try preferred models first
         for pref in preferred:
             if pref in available_names:
+                logger.info(f"Selected preferred model: {pref}")
                 return pref
         
         # Return first available model that supports generateContent
         if available_names:
+            logger.info(f"Selected fallback model: {available_names[0]}")
             return available_names[0]
         
+        logger.warning("No suitable Gemini model found.")
         return None
     except Exception as e:
-        print(f"Error listing models: {e}")
+        logger.error(f"Error listing models: {e}")
         return None
 
 
@@ -127,31 +138,46 @@ class RestaurantChatbot:
             
             if model_name:
                 self.model = genai.GenerativeModel(model_name)
-                system_prompt = get_system_prompt(self.table_id, self.menu_data, self.deals)
-                self.chat = self.model.start_chat(history=[])
-                # Send system context as first message
-                self.chat.send_message(f"""[SYSTEM CONTEXT - Do not repeat this to users]
-{system_prompt}
+                # system_prompt = get_system_prompt(self.table_id, self.menu_data, self.deals) # Already generated
+                
+                try:
+                    self.chat = self.model.start_chat(history=[])
+                    # Send system context as first message
+                    self.chat.send_message(f"""[SYSTEM CONTEXT - Do not repeat this to users]
+{self.system_prompt}
 
 Now, greet the customer at Table {self.table_id} and ask what they would like to order. Show the main categories.""")
-                self.api_available = True
+                    self.api_available = True
+                    logger.info("Chatbot session initialized successfully.")
+                except Exception as e:
+                    logger.error(f"Error during start_chat or initial message: {e}")
+                    self.api_available = False
             else:
+                logger.error("No available Gemini model found during init.")
                 self.api_available = False
                 
         except Exception as e:
-            print(f"Failed to initialize Gemini chat: {e}")
+            logger.critical(f"Failed to initialize Gemini chat: {e}")
             self.api_available = False
     
     def send_message(self, user_message: str) -> str:
         """Send a message and get response from the chatbot."""
         if not self.api_available:
+            logger.warning("API not available, using fallback response.")
             return self._fallback_response(user_message)
         
         try:
             response = self.chat.send_message(user_message)
             return response.text
         except Exception as e:
-            return f"I apologize, but I'm having trouble processing your request. Please use the Quick Menu tab to place your order. (Error: {str(e)})"
+            logger.error(f"Error sending message to Gemini: {e}")
+            # Try to re-initialize if it might be a session issue (optional, for now just fallback)
+            # If it's a quote limit or server error, we should tell the user
+            error_str = str(e).lower()
+            if "429" in error_str or "quota" in error_str:
+                return "I'm currently receiving too many requests. Please try again in a moment, or use the Quick Menu tab."
+            
+            return f"I apologize, but I'm having trouble processing your request right now. Please use the Quick Menu tab to place your order. (Technical details: {str(e)[:50]}...)"
     
     def _fallback_response(self, user_message: str) -> str:
         """Provide basic responses when API is unavailable."""
@@ -183,9 +209,10 @@ Our categories: Fast Food, Pizza, Meat & BBQ, Tea, Ice Cream"""
         if self.api_available:
             try:
                 # The welcome was sent during initialization, get it from history
-                if self.chat.history and len(self.chat.history) >= 2:
+                if self.chat and self.chat.history and len(self.chat.history) >= 2:
                     return self.chat.history[1].parts[0].text
-            except:
+            except Exception as e:
+                logger.warning(f"Could not retrieve welcome message from history: {e}")
                 pass
         
         # Fallback welcome message - warm and friendly
@@ -261,7 +288,7 @@ def test_connection() -> bool:
             return "connected" in response.text.lower()
         return False
     except Exception as e:
-        print(f"Gemini API connection error: {e}")
+        logger.error(f"Gemini API connection error: {e}")
         return False
 
 
@@ -271,5 +298,5 @@ def list_available_models() -> List[str]:
         models = genai.list_models()
         return [model.name for model in models]
     except Exception as e:
-        print(f"Error listing models: {e}")
+        logger.error(f"Error listing models: {e}")
         return []
