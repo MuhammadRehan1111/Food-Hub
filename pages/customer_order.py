@@ -56,9 +56,9 @@ st.markdown("""
     footer {visibility: hidden;}
     
     /* Hide Default Sidebar Navigation */
-    /* [data-testid="stSidebarNav"] {
+    [data-testid="stSidebarNav"] {
         display: none !important;
-    } */
+    }
     
     /* Header styling */
     .main-header {
@@ -634,100 +634,12 @@ with st.sidebar:
                 st.rerun()
 
 # Main content - Three tabs
-tab1, tab2, tab3 = st.tabs(["Quick Menu", "AI Waiter", "Premium Deals"])
+tab1, tab2, tab3 = st.tabs(["AI Waiter", "Quick Menu", "Premium Deals"])
 
 # =============================================================================
-# TAB 1: QUICK MENU (with images)
+# TAB 1: CHATBOT (Multilingual)
 # =============================================================================
 with tab1:
-    st.markdown('<p class="section-header">Explore Our Delicious Menu</p>', unsafe_allow_html=True)
-    
-    # Category selection
-    if 'selected_menu_category' not in st.session_state:
-        st.session_state.selected_menu_category = "All"
-    
-    # Display category buttons with images
-    st.markdown('<p style="color: #d4af37; font-size: 1.2rem; font-weight: 600; font-family: \'Playfair Display\', serif;">Select a Category:</p>', unsafe_allow_html=True)
-    
-    # Filter categories to only active ones
-    active_cats = [c for c in categories if c.get('active', True)]
-    
-    cols = st.columns(len(active_cats) + 1)
-    
-    # "All" category
-    with cols[0]:
-        is_all_selected = st.session_state.selected_menu_category == "All"
-        st.markdown(f"""
-        <div class="category-card {'selected' if is_all_selected else ''}">
-            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=200" class="category-image">
-            <p class="category-name">All</p>
-        </div>
-        """, unsafe_allow_html=True)
-        if st.button("Select All", key="cat_btn_all", use_container_width=True):
-            st.session_state.selected_menu_category = "All"
-            st.rerun()
-
-    for i, cat in enumerate(active_cats):
-        with cols[i + 1]:
-            cat_image = cat.get('image', 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=200')
-            is_selected = st.session_state.selected_menu_category == cat['name']
-            
-            st.markdown(f"""
-            <div class="category-card {'selected' if is_selected else ''}">
-                <img src="{cat_image}" class="category-image" onerror="this.src='https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=200'">
-                <p class="category-name">{cat['name']}</p>
-            </div>
-            """, unsafe_allow_html=True)
-            
-            if st.button(f"Select {cat['name']}", key=f"cat_btn_{cat['id']}", use_container_width=True):
-                st.session_state.selected_menu_category = cat['name']
-                st.rerun()
-    
-    st.divider()
-    
-    # Display menu items
-    display_items = []
-    if st.session_state.selected_menu_category == "All":
-        for cat_name, items in menu.items():
-            display_items.extend(items)
-    elif st.session_state.selected_menu_category in menu:
-        display_items = menu[st.session_state.selected_menu_category]
-    
-    # Filter available items
-    available_items = [itm for itm in display_items if itm.get('available', True)]
-    
-    if not available_items:
-        st.info("No items found in this section.")
-    else:
-        # Display in grid (3 columns)
-        cols = st.columns(3)
-        for i, item in enumerate(available_items):
-            with cols[i % 3]:
-                name = item['name'].get('en', 'Unknown')
-                desc = item.get('description', {}).get('en', '')
-                price = item['price']
-                image_url = item.get('image', 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400')
-                
-                st.markdown(f"""
-                <div class="menu-card">
-                    <img src="{image_url}" class="menu-image" alt="{name}" onerror="this.src='https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400'">
-                    <div class="menu-info">
-                        <div class="menu-name">{name}</div>
-                        <div class="menu-desc">{desc[:60] + '...' if len(desc) > 60 else desc}</div>
-                        <div class="menu-price">{price} SAR</div>
-                    </div>
-                </div>
-                """, unsafe_allow_html=True)
-                
-                if st.button(f"Add to Cart", key=f"add_menu_{item['item_id']}_{i}", use_container_width=True):
-                    new_qty = add_to_cart(item['item_id'], name, price)
-                    st.toast(f"Added {name} (Qty: {new_qty})! ✨", icon="✅")
-                    st.rerun()
-
-# =============================================================================
-# TAB 2: AI WAITER (Multilingual)
-# =============================================================================
-with tab2:
     st.markdown('<p class="section-header">Chat with our AI Assistant</p>', unsafe_allow_html=True)
     st.markdown('<p style="color: #ffffff; font-size: 0.9rem;">Supports English • اردو • العربية</p>', unsafe_allow_html=True)
     
@@ -834,6 +746,94 @@ with tab2:
             welcome = st.session_state.chatbot.get_welcome_message()
             st.session_state.chat_messages.append({"role": "assistant", "content": welcome})
             st.rerun()
+
+# =============================================================================
+# TAB 2: QUICK MENU (with images)
+# =============================================================================
+with tab2:
+    st.markdown('<p class="section-header">Explore Our Delicious Menu</p>', unsafe_allow_html=True)
+    
+    # Category selection
+    if 'selected_menu_category' not in st.session_state:
+        st.session_state.selected_menu_category = "All"
+    
+    # Display category buttons with images
+    st.markdown('<p style="color: #d4af37; font-size: 1.2rem; font-weight: 600; font-family: \'Playfair Display\', serif;">Select a Category:</p>', unsafe_allow_html=True)
+    
+    # Filter categories to only active ones
+    active_cats = [c for c in categories if c.get('active', True)]
+    
+    cols = st.columns(len(active_cats) + 1)
+    
+    # "All" category
+    with cols[0]:
+        is_all_selected = st.session_state.selected_menu_category == "All"
+        st.markdown(f"""
+        <div class="category-card {'selected' if is_all_selected else ''}">
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=200" class="category-image">
+            <p class="category-name">All</p>
+        </div>
+        """, unsafe_allow_html=True)
+        if st.button("Select All", key="cat_btn_all", use_container_width=True):
+            st.session_state.selected_menu_category = "All"
+            st.rerun()
+
+    for i, cat in enumerate(active_cats):
+        with cols[i + 1]:
+            cat_image = cat.get('image', 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=200')
+            is_selected = st.session_state.selected_menu_category == cat['name']
+            
+            st.markdown(f"""
+            <div class="category-card {'selected' if is_selected else ''}">
+                <img src="{cat_image}" class="category-image" onerror="this.src='https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=200'">
+                <p class="category-name">{cat['name']}</p>
+            </div>
+            """, unsafe_allow_html=True)
+            
+            if st.button(f"Select {cat['name']}", key=f"cat_btn_{cat['id']}", use_container_width=True):
+                st.session_state.selected_menu_category = cat['name']
+                st.rerun()
+    
+    st.divider()
+    
+    # Display menu items
+    display_items = []
+    if st.session_state.selected_menu_category == "All":
+        for cat_name, items in menu.items():
+            display_items.extend(items)
+    elif st.session_state.selected_menu_category in menu:
+        display_items = menu[st.session_state.selected_menu_category]
+    
+    # Filter available items
+    available_items = [itm for itm in display_items if itm.get('available', True)]
+    
+    if not available_items:
+        st.info("No items found in this section.")
+    else:
+        # Display in grid (3 columns)
+        cols = st.columns(3)
+        for i, item in enumerate(available_items):
+            with cols[i % 3]:
+                name = item['name'].get('en', 'Unknown')
+                desc = item.get('description', {}).get('en', '')
+                price = item['price']
+                image_url = item.get('image', 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400')
+                
+                st.markdown(f"""
+                <div class="menu-card">
+                    <img src="{image_url}" class="menu-image" alt="{name}" onerror="this.src='https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400'">
+                    <div class="menu-info">
+                        <div class="menu-name">{name}</div>
+                        <div class="menu-desc">{desc[:60] + '...' if len(desc) > 60 else desc}</div>
+                        <div class="menu-price">{price} SAR</div>
+                    </div>
+                </div>
+                """, unsafe_allow_html=True)
+                
+                if st.button(f"Add to Cart", key=f"add_menu_{item['item_id']}_{i}", use_container_width=True):
+                    new_qty = add_to_cart(item['item_id'], name, price)
+                    st.toast(f"Added {name} (Qty: {new_qty})! ✨", icon="✅")
+                    st.rerun()
 
 # =============================================================================
 # TAB 3: DEALS (Premium Deals Only)
